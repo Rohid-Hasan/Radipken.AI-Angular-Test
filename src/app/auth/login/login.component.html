@@ -1,0 +1,27 @@
+<div class="w-100 justify-content-center mt-3 mb-3">
+    <div class="w-40">
+        <div class="card bg-danger text-center" *ngIf="errorMessage">
+            <h3 class="p-3 text-white"><strong>{{errorMessage}}</strong></h3>
+        </div>
+        <mat-card class="card">
+            <form [formGroup]="loginForm" (submit)="onSubmit()">
+                <mat-form-field appearance="outline" class="w-100 my-2">
+                    <mat-label>Username</mat-label>
+                    <input type="text" formControlName="username" matInput placeholder="enter admin">
+                    <mat-error>Username is required</mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="w-100 my-2">
+                    <mat-label>Enter your password</mat-label>
+                    <input formControlName="password" matInput [type]="hide ? 'password' : 'text'">
+                    <mat-error>Password is required</mat-error>
+                    <button type="button" mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                        [attr.aria-pressed]="hide">
+                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+                </mat-form-field>
+                <button mat-flat-button class="btn btn-primary px-5" [disabled]="!loginForm.valid" type="submit">Login
+                </button>
+            </form>
+        </mat-card>
+    </div>
+</div>

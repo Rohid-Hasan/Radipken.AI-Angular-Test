@@ -1,0 +1,33 @@
+<div class="w-100 justify-content-center">
+    <div class="w-40">
+        <mat-card class="card">
+            <form [formGroup]="employeeForm" (submit)="onSubmit()">
+                <mat-form-field appearance="outline" class="w-100 my-2">
+                    <mat-label>Name</mat-label>
+                    <input type="text" formControlName="name" matInput placeholder="Ex. Rohid">
+                    <mat-error>Name is required</mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="w-100 my-2">
+                    <mat-label>position</mat-label>
+                    <input type="text" formControlName="position" matInput placeholder="Ex. Angular Developer">
+                    <mat-error>position is required</mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="w-100 my-2">
+                    <mat-label>About</mat-label>
+                    <input type="text" formControlName="about" matInput placeholder="About Employee">
+                    <mat-error>About Employee is required</mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="w-50 my-2">
+                    <mat-label>Joining Date</mat-label>
+                    <input matInput [matDatepicker]="picker" formControlName="joiningDate">
+                    <mat-error>Please enter a joining date for the employee</mat-error>
+                    <mat-hint>MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+                <button class="btn btn-primary" mat-flat-button type="submit" [disabled]="employeeForm.invalid">Add
+                    Employee</button>
+            </form>
+        </mat-card>
+    </div>
+</div>

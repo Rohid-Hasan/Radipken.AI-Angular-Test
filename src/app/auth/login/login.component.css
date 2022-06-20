@@ -1,0 +1,10 @@
+.w-40{
+    width: 40%;
+    margin: auto;
+}
+
+@media screen and (max-width:768px) {
+    .w-40{
+        width: 100%;
+    }
+}

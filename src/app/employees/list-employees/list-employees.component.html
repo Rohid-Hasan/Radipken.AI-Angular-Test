@@ -1,0 +1,6 @@
+<div class="w-100">
+    <h1 class="ml-3"><strong>List Of Employees</strong></h1>
+
+    <app-table-view [employees]="employees" *ngIf="isTableView"></app-table-view>
+    <app-card-view [employees]="employees" *ngIf="isCardView"></app-card-view>
+</div>

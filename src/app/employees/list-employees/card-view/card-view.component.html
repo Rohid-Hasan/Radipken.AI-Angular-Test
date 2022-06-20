@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12" *ngFor="let employee of obs | async">
+        <mat-card class="card">
+            <mat-card-title-group>
+                <mat-icon mat-card-sm-image>account_circle</mat-icon>
+                <mat-card-title><strong>{{employee.name}}</strong></mat-card-title>
+                <mat-card-subtitle><strong>{{employee.position}}</strong></mat-card-subtitle>
+            </mat-card-title-group>
+            <mat-card-content>
+                <p class="text-muted mb-3">{{employee.about}}</p>
+                <p class="mb-3"> <strong><span class="text-red">Joining Date : </span>
+                        {{employee.joiningDate.getDate()
+                        }}/{{employee.joiningDate.getMonth() }}/{{employee.joiningDate.getFullYear() }}
+                    </strong> </p>
+                <button mat-flat-button class="btn btn-danger" (click)="onDeleteEmployee(employee.id)">Delete</button>
+                <button mat-flat-button class="btn btn-warning"><a
+                        routerLink="/employees/edit/{{employee.id}}">Edit</a></button>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <mat-paginator #paginator [pageSize]="2" [pageSizeOptions]="[2, 5, 10, 20]">
+    </mat-paginator>
+</div>
