@@ -21,7 +21,7 @@ export class EditEmployeesComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.params.subscribe((param: Params) => {
-      const id = +param['id'];
+      const id = param['id'];
       const employee = this.dataService.getById(id);
       this.employeeForm = this.formBuilder.group({
         name: [employee.name, Validators.required],
