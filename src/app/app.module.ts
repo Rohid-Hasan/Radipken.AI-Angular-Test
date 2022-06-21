@@ -84,13 +84,9 @@ import { EditEmployeesComponent } from './employees/edit-employees/edit-employee
     FormsModule,
     ReactiveFormsModule,
 
-    A11yModule,
-    CdkStepperModule,
+    
     CdkTableModule,
     CdkTreeModule,
-    DragDropModule,
-    MatAutocompleteModule,
-    MatBadgeModule,
     MatBottomSheetModule,
     MatButtonModule,
     MatButtonToggleModule,
@@ -99,8 +95,7 @@ import { EditEmployeesComponent } from './employees/edit-employees/edit-employee
     MatChipsModule,
     MatStepperModule,
     MatDatepickerModule,
-    MatDialogModule,
-    MatDividerModule,
+   
     MatExpansionModule,
     MatGridListModule,
     MatIconModule,
@@ -122,8 +117,6 @@ import { EditEmployeesComponent } from './employees/edit-employees/edit-employee
     MatTabsModule,
     MatToolbarModule,
     MatTooltipModule,
-    MatTreeModule,
-    PortalModule,
     ScrollingModule,
     LayoutModule,
     MatFormFieldModule,

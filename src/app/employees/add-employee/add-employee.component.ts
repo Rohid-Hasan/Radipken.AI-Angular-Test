@@ -37,6 +37,6 @@ export class AddEmployeeComponent implements OnInit {
     );
     this.dataService.addEmployee(employee);
     //redirect to list-employee page
-    this.router.navigate(['/list-employees', 'table']);
+    this.router.navigate([ '/employees','list-employees', 'table']);
   }
 }
